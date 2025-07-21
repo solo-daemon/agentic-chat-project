@@ -1,7 +1,7 @@
 # Demo
-link to video : [here]([here](https://www.youtube.com/watch?v=kAivqquT7ro))
+link to video : [here](https://www.youtube.com/watch?v=kAivqquT7ro)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kAivqquT7ro?si=1DRkDre9msCVhbEz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<img width="1286" height="826" alt="image" src="https://github.com/user-attachments/assets/583160e3-4dbb-491f-b633-be575da07378" />
 
 # Setup Instructions
 ```bash
@@ -16,6 +16,7 @@ link to video : [here]([here](https://www.youtube.com/watch?v=kAivqquT7ro))
 ```
 
 > Suggested
+<img width="800" height="705" alt="Screenshot 2025-07-21 at 11 40 35 PM" src="https://github.com/user-attachments/assets/6c459325-7734-41c8-a738-4e50ed2593d6" />
 
 
 ### Future
