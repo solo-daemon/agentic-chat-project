@@ -16,7 +16,7 @@ link to video : [here](https://www.youtube.com/watch?v=kAivqquT7ro)
 ```
 
 > Suggested
-<img width="800" height="705" alt="Screenshot 2025-07-21 at 11 40 35 PM" src="https://github.com/user-attachments/assets/6c459325-7734-41c8-a738-4e50ed2593d6" />
+<img width="864" height="707" alt="image" src="https://github.com/user-attachments/assets/95fdcc22-f91d-4568-adc9-017145cba6a7" />
 
 
 ### Future
