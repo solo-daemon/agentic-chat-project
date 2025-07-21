@@ -273,7 +273,7 @@ def build_llm_prompt(user_query: str, datapoints: List[ScrapeDataPoint]) -> str:
 **Highlighted Words:** {", ".join(meta.snippet_highlighted_words or [])}
 
 ### MARKDOWN CONTENT
-{dp.markdown.strip()[:12000]}
+{dp.markdown.strip()}
         """)
     # Add formatting expectations for the agent
     blocks.append("""
@@ -304,7 +304,7 @@ You are a precise, factual assistant. Analyze the provided markdowns and generat
 
                   
 ### FIELD DESCRIPTORS ###
-	-   detailed_analysis: A concise (200–600 words) analysis in markdown format. Should explain the key insights and do comparisons/review/suggest if applicable.
+	-   detailed_analysis: A concise (200–600 words) analysis in markdown format. Should explain the key insights and do comparisons/review/suggest if applicable. Ensure that it is never empty and includes highly realavant for the user query.
 	-   websites: An array of useful links with:
 	-   favicon_url: Taken from each datapoint’s favicon field.
 	-   link: The main link from the datapoint.
@@ -522,6 +522,7 @@ async def process_query(user_query: str):
     # logger.info(f"[SUMMARIZER-AGENT] No of datapoints: {len(datapoints)}")
     result = await summarize_for_user(user_query, datapoints=datapoints)
     logger.info(f"[AGENT] Query finished , response sent to user.")
+    return result
     return {
         "task_id": task_id,
         "sub_queries": sub_questions,

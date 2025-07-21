@@ -25,20 +25,12 @@ export default function RootLayout({
 
 {
 
-  const COPILOT_KIT_API_KEY = process.env.COPILOT_KIT_API_KEY!
-  if(!COPILOT_KIT_API_KEY){
-    return(
-      <div>ask the developer to add copilot kit api key</div>
-    )
-  }
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <CopilotKit publicApiKey={COPILOT_KIT_API_KEY}>
           {children}
-        </CopilotKit>
       </body>
     </html>
   );
