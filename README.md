@@ -1,29 +1,58 @@
 # Demo
 link to video : [here](https://www.youtube.com/watch?v=kAivqquT7ro)
 
-<img width="1286" height="826" alt="image" src="https://github.com/user-attachments/assets/583160e3-4dbb-491f-b633-be575da07378" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/583160e3-4dbb-491f-b633-be575da07378" alt="image" style="max-width: 100%; height: auto;" />
+</p>
 
 # Setup Instructions
 ```bash
+:'
+FRONTEND_ENV:
+NEXT_PUBLIC_API_KEY // api key shared between backend and frontend
 
+BACKEND_ENV:
+FIRECRAWL_API_KEY
+GOOGLE_API_KEY
+SERPAI_API_KEY
+AGENT_API_KEY  // api key shared between backend and frontend
+'
+cp ./frontend/env.example ./frontend/.env
+cp ./backend/env.example ./backend/.env
+
+:'
+RUN FRONTEND
+'
+cd frontend
+bun run dev
+
+:'
+RUN BACKEND
+'
+cd backend
+python3 -m venv ./env
+source ./env/bin/activate
+pip3 install -r requirements.txt
+fastapi dev main.py
 ```
 # Planning
 ### High Level Design
 
 > Implemented
 ```bash
-[await api] -> [generate_subqueries] -> [seed_url_generation with serp ai] -> [scraping_of_urls (firecrawler)] -> [await relased api returned]
+[await api] -> [generate_subqueries_with_llm] -> [seed_url_generation with serp ai] -> [filtering_urls for crawling] -> [scraping_of_urls (firecrawler)] -> [summarize_result_with_llm] -> [await relased api returned]
 ```
 
 > Suggested
+
 <img width="864" height="707" alt="image" src="https://github.com/user-attachments/assets/95fdcc22-f91d-4568-adc9-017145cba6a7" />
 
-
-### Future
+### Auth
+> #### **API_KEY** is passed in header from frontend to backend for now.
 
 # Results
 
-### Images
+
 ### Agent Log (used in demo video):
 ```python
       INFO   127.0.0.1:63353 - "OPTIONS                                                       
