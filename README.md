@@ -50,6 +50,12 @@ fastapi dev main.py
 ### Auth
 > #### **API_KEY** is passed in header from frontend to backend for now.
 
+### Security 
+> Was not able to work on this in the 48 hour window. Working on it!, Planning on preventing input prompt injection.
+
+### Extras 
+> Planned but not implemented a streaming response from the api through websocket in order to make the frontend more interactive with server side events.
+
 # Results
 
 
