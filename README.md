@@ -24,6 +24,7 @@ cp ./backend/env.example ./backend/.env
 RUN FRONTEND
 '
 cd frontend
+bun install
 bun run dev
 
 :'
